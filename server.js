@@ -1,5 +1,5 @@
 const express = require("express");
-const PORT = 8080;
+const PORT = process.env.PORT || 8080;
 var app = express();
 const morgan = require("morgan");
 app.use(morgan("dev"));
@@ -13,6 +13,6 @@ app.use(express.static("public"));
 var routes = require("./controllers/burgers_controller.js");
 
 app.use(routes);
-app.listen(process.env.PORT || PORT, function() {
-  console.log(`Server listening on: ${process.env.PORT || PORT}`);
+app.listen(PORT, function() {
+  console.log("Server listening on: " + PORT);
 });
