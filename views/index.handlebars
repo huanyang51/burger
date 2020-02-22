@@ -1,21 +1,46 @@
-<h1>burgers!</h1>
+<div class="container">
 
-<h2>burgers that are not devoured!</h2>
+    <div class="d-flex justify-content-center">
+        <h1>Eat-A-Burger!</h1>
+    </div>
 
-<ul>
-    {{#each burgers}}
-    {{#unless devoured}}
-    {{> burgers/burger-block devoured=true}}
-    {{/unless}}
-    {{/each}}
-</ul>
+    <div class="row">
+        <div class="col-6 not-devoured">
+            {{#each burgers}}
+            {{#unless devoured}}
+            <p>
+                {{id}}. {{burger_name}}
+                <button class="devoured" data-id="{{id}}">
+                    Devour it!
+                </button>
+            </p>
+            {{/unless}}
+            {{/each}}
+        </div>
 
-<h2>Burgers that are devoured!</h2>
 
-<ul>
-    {{#each burgers}}
-    {{#if devoured}}
-    {{> burgers/burger-block devoured=false}}
-    {{/if}}
-    {{/each}}
-</ul>
+
+        <div class="col-6 devoured">
+            {{#each burgers}}
+            {{#if devoured}}
+            <p>
+                {{id}}. {{burger_name}}
+            </p>
+            {{/if}}
+            {{/each}}
+        </div>
+    </div>
+
+    <div class="d-flex justify-content-center">
+        <form>
+            <div class="form-group">
+                <input type="name" class="form-control" id="newBurgerName">
+                <small id=" nameHelp" class="form-text text-muted">Enter a burger you want to eat and then click the
+                    "Submit" button
+                    .</small>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+</div>
