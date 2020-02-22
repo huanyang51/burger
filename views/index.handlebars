@@ -5,12 +5,12 @@
     </div>
 
     <div class="row">
-        <div class="col-6 not-devoured">
+        <div class="col-6">
             {{#each burgers}}
             {{#unless devoured}}
             <p>
                 {{id}}. {{burger_name}}
-                <button class="devoured" data-id="{{id}}">
+                <button class="not-devoured" data-id="{{id}}">
                     Devour it!
                 </button>
             </p>
@@ -18,9 +18,7 @@
             {{/each}}
         </div>
 
-
-
-        <div class="col-6 devoured">
+        <div class="col-6">
             {{#each burgers}}
             {{#if devoured}}
             <p>
@@ -32,12 +30,11 @@
     </div>
 
     <div class="d-flex justify-content-center">
-        <form>
+        <form class="create-form">
             <div class="form-group">
                 <input type="name" class="form-control" id="newBurgerName">
-                <small id=" nameHelp" class="form-text text-muted">Enter a burger you want to eat and then click the
-                    "Submit" button
-                    .</small>
+                <small id="nameHelp" class="form-text text-muted">Enter a burger you want to eat and then click the
+                    "Submit" button.</small>
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
