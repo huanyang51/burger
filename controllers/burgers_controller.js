@@ -13,12 +13,7 @@ router.get("/", function(req, res) {
 });
 router.post("/api/burgers", function(req, res) {
   burger.add(req.body.burger_name, function(result) {
-    if (result.changedRows == 0) {
-      // If no rows were changed, then no item added, so 404
-      return res.status(404).end();
-    } else {
-      res.status(200).end();
-    }
+    res.json(result);
   });
 });
 router.put("/api/burgers/:id", function(req, res) {
