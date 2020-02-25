@@ -12,7 +12,28 @@
 </head>
 
 <body>
-    {{{ body }}}
+    <div class="container">
+        <div class="text-center">
+            <img src="/assets/img/burger_img.jpg" class="rounded" alt="burger_img" height="200" , width="200">
+        </div>
+        <div class="d-flex justify-content-center">
+            <h1>Eat-A-Burger!</h1>
+        </div>
+        {{{ body }}}
+        <div class="d-flex justify-content-center">
+            <form class="create-form">
+                <div class="form-group">
+                    <input type="name" class="form-control" id="newBurgerName">
+                    <small id="nameHelp" class="form-text">Enter a burger you want to eat and then click the
+                        "Submit" button.</small>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>

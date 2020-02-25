@@ -1,0 +1,18 @@
+.btn {
+  background-color: rgb(241, 193, 70);
+  border: none;
+}
+.btn:hover {
+  background-color: goldenrod;
+  border: none;
+}
+.form-text {
+  color: firebrick;
+}
+.not-devoured {
+  background-color: rgb(250, 203, 84);
+  border: none;
+}
+.not-devoured:hover {
+  color: firebrick;
+}
